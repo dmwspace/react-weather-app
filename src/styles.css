@@ -1,0 +1,224 @@
+@media screen and (min-width: 992px){
+    #precip {
+        width: 30px
+    }
+    #glass {
+        width: 16px;
+    }
+    #input {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #input #ack {
+        font-size: 20px;
+        text-align: center;
+    }
+    .current-conditions {
+        margin: auto; 
+        width: 100%; 
+        text-align: center
+    }
+    .current-conditions div {
+        display: inline;
+    }
+    .current-conditions #feels-like {
+        font-size: 35px;
+    }
+    .current-conditions .currently {
+        font-size: 35px;
+    }
+    .current-conditions h2 {
+        font-size: 35px;
+    }
+    #forecast {
+        display: flex; 
+        flex-direction: row;
+        color: white;
+        width: 90%;
+    }
+    .forecast-card {
+        width: 20%;
+        text-align: center;
+    } 
+}
+@media screen and (max-width: 991px) and (min-width: 771px) {
+    #precip {
+        width: 30px
+    }
+    #glass {
+        width: 16px;
+    } 
+    span {
+        display: inline-grid;
+        font-size: 30px;
+        align-items: center;
+        text-align: center
+    }
+    #input {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #input #ack {
+        font-size: 20px;
+        text-align: center;
+    }
+    #current-conditions {
+        margin: auto; 
+        width: 100%; 
+        text-align: center
+    }
+    .current-conditions h1 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .current-conditions div {
+        display: block;
+    }
+    .current-conditions img {
+        height: 80px;
+    }     
+    .current-conditions span {
+        font-size: 15px;
+    }
+    .current-conditions .wind::before{
+        content: '\A';
+        white-space: pre;
+        
+    }
+    .current-conditions .wind {
+        font-size: 20px;
+    }
+    #forecast {
+        display: flex; 
+        flex-direction: row;
+        color: white;
+        width: 100%;
+    }
+    .forecast-card {
+        width: 20%;
+        text-align: center;
+    }
+    .card-body {
+        text-align: center;
+    }
+
+    .card-body .card-title {
+        font-size: 18px;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .card-body .img-1 {
+        height: 50px;
+        display: inline;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .card-body h2 {
+        font-size: 18px;
+        display: inline;
+    }
+
+    .card-body div {
+        display: inline;
+    }
+    .card-body span {
+        font-size: 18px;
+        margin-right: 2px;
+    }
+    #precip {
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+    #body {
+        font-size: 100%;
+    }
+    #input {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #glass {
+        width: 12px;
+    }
+
+    #input #ack {
+        font-size: .7rem;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+    .current-conditions {
+        margin-top: 10px; 
+        width: 90%; 
+        text-align: center;
+        margin: auto;
+    }
+    .current-conditions img {
+        height: 3rem;
+        display: inline;
+        margin-right: .8rem;
+    }
+    .current-conditions .currently {
+        font-size: 1.2rem;
+    }
+    .current-conditions #feels-like {
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .current-conditions .wind {
+        font-size: 1.2rem;
+        display: block;
+    }
+    #forecast {
+        display: flex;
+        flex-direction: column;
+        color: white
+    }
+    .forecast-card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-body {
+        text-align: center;
+    }
+    .card-body .card-title {
+        font-size: 1.2rem;
+        display: inline;
+        margin-right: .1rem;
+    }
+    .card-body .img-1 {
+        height: 2rem;
+        display: inline;
+        margin-right: .3rem;
+        margin-left: .3rem;
+    }
+    .card-body h2 {
+        font-size: 1.2rem;
+        display: inline;
+    }
+    .card-body div {
+        display: inline;
+    }
+    .card-body span {
+        font-size: 1.2rem;
+        margin-right: 2px;
+    }
+    #precip {
+        width: 1.8rem;
+        margin-right: .1rem;
+        margin-left: .01rem;
+    }
+}
