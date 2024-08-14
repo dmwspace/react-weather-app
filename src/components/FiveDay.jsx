@@ -66,14 +66,14 @@ function FiveDay(props) {
                         <Card.Title bsPrefix="card-title">{fullWeekdayName} {monthWithoutLeadingZero}-{dateWithoutLeadingZero}</Card.Title>
                         <img 
                             className="img-1"
-                            src={process.env.PUBLIC_URL + "/icons/" + props.item.weather.icon + ".png"} alt="Problem" />
+                            src={"../../icons/" + props.item.weather.icon + ".png"} alt="Problem" />
                         <div style={{fontSize: 20}}>
                             <h2 style={{fontWeight: 700}}>{hiTemp}  <span style={{fontWeight: 400}}>/ {loTemp}</span></h2>
                             <img
                                 id="precip"
                                 src={props.item.weather.code < 600 || props.item.weather.code > 699 ?
-                                    process.env.PUBLIC_URL + "/icons/raindrop1.png" :
-                                    process.env.PUBLIC_URL + "/icons/snowflake.png"} 
+                                    "../../icons/raindrop1.webp" :
+                                    "../../icons/snowflake.png"} 
                                 alt="problem"
                             /><span>{props.item.pop}%</span>
                         </div> 

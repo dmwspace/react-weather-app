@@ -37,7 +37,7 @@ function Hooks() {
         setCurrentFetched(false)
         setFiveDayFetched(false)
         setZipCode(fiveDigits)
-        const apiKey = process.env.REACT_APP_WEATHERBIT_API_KEY
+        const apiKey = import.meta.env.VITE_APP_WEATHERBIT_API_KEY
         setTimeout(() => {setClicked(true)}, 600)
         fetch(`http://api.weatherbit.io/v2.0/current/?postal_code=${fiveDigits}&units=I&key=${apiKey}`)
         .then(res => res.json())
@@ -54,7 +54,7 @@ function Hooks() {
             setWindDirection(currentData.data[0].wind_cdir)
             setCurrentIcon(currentData.data[0].weather.icon)
         })
-        const url4 = `http://api.weatherbit.io/v2.0/forecast/daily?postal_code=${fiveDigits}&units=I&key=${apiKey}`
+        const url4 = `http://api.weatherbit.io/v2.0/forecast/daily?postal_code=${fiveDigits}&units=I&days=5&key=${apiKey}`
         setTimeout(() => {
             fetch(url4)
             .then(res => res.json())
