@@ -58,10 +58,7 @@ function Header() {
                     onChange={(e) => handleChange(e.target.value)}
                     onKeyDown={handleKeyPress}
                 ></input><button
-                    onClick={handleClick}
-                ><img id="glass"
-                    src={process.env.PUBLIC_URL + "/icons/glass.png"} alt="?"
-                /></button>
+                    onClick={handleClick}>Go</button>
                 <h2 id="ack">Weather data provided by weatherbit.io</h2>
             </Container>
             <Container>

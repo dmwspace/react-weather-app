@@ -54,7 +54,7 @@ function Hooks() {
             setWindDirection(currentData.data[0].wind_cdir)
             setCurrentIcon(currentData.data[0].weather.icon)
         })
-        const url4 = `${API_URL}/backend_fiveDay?zip=${fiveDigits}&key=${apiKey}`
+        const url4 = `http://api.weatherbit.io/v2.0/backend_fiveDay?zip=${fiveDigits}&key=${apiKey}`
         setTimeout(() => {
             fetch(url4)
             .then(res => res.json())
