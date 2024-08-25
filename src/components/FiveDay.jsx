@@ -1,12 +1,13 @@
 import {Card} from "react-bootstrap";
 
 function FiveDay(props) {
+    //console.log("props.item.datetime", props.item.datetime)
     const year = props.item.datetime.slice(0, 4)
     const month = props.item.datetime.slice(5, 7)
     const date = props.item.datetime.slice(8)
     const dateWithoutLeadingZero = +date
     const monthWithoutLeadingZero = +month
-
+    console.log(matchMedia)
     const monthName = 
         month === "01" ?
             "January" :
@@ -53,12 +54,13 @@ function FiveDay(props) {
             "Sat" :
             null
 
-    const hiTemp = Math.round(props.item.max_temp)
-    const loTemp = Math.round(props.item.min_temp)
-
+    // const hiTemp = props.item.max_temp
+    // const loTemp = props.item.min_temp
+    
     return (
+        
         !props.clicked ?
-            null :
+        null :
         props.clicked && !props.fiveDayFetched ?
             <h1>There are too many requests for the forecast api at this time, please try again.</h1> :
                 <Card bg='primary' bsPrefix="forecast-card">
@@ -66,19 +68,23 @@ function FiveDay(props) {
                         <Card.Title bsPrefix="card-title">{fullWeekdayName} {monthWithoutLeadingZero}-{dateWithoutLeadingZero}</Card.Title>
                         <img 
                             className="img-1"
-                            src={"../../icons/" + props.item.weather.icon + ".png"} alt="Problem" />
+                            src={"../icons/" + props.item.weather.icon + ".png"} alt="Problem" />
                         <div style={{fontSize: 20}}>
-                            <h2 style={{fontWeight: 700}}>{hiTemp}  <span style={{fontWeight: 400}}>/ {loTemp}</span></h2>
+                            <h2 style={{fontWeight: 700}}>{props.item.max_temp}  <span style={{fontWeight: 400}}>/ {props.item.min_temp}</span></h2>
                             <img
                                 id="precip"
                                 src={props.item.weather.code < 600 || props.item.weather.code > 699 ?
-                                    "../../icons/raindrop1.webp" :
-                                    "../../icons/snowflake.png"} 
+                                    "../icons/raindrop1.webp" :
+                                    "../icons/snowflake.png"} 
                                 alt="problem"
                             /><span>{props.item.pop}%</span>
                         </div> 
                     </Card.Body>
                 </Card>
+                    
+                
+                
+
     )
 }
 export default FiveDay

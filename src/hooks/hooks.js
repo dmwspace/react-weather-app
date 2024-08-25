@@ -53,18 +53,22 @@ function Hooks() {
             setWindSpeed(currentData.data[0].wind_spd)
             setWindDirection(currentData.data[0].wind_cdir)
             setCurrentIcon(currentData.data[0].weather.icon)
+            getFiveDay()
         })
-        const url4 = `http://api.weatherbit.io/v2.0/forecast/daily?postal_code=${fiveDigits}&units=I&days=5&key=${apiKey}`
-        setTimeout(() => {
+        
+        function getFiveDay() {
+            const url4 = `http://api.weatherbit.io/v2.0/forecast/daily?postal_code=${fiveDigits}&units=I&days=5&key=${apiKey}`
             fetch(url4)
             .then(res => res.json())
             .then(data => {
             const strFiveDay = JSON.stringify(data)
             const jsonFiveDay = JSON.parse(strFiveDay)
+            //console.log('jsonFiveDay.data', jsonFiveDay.data)
             setFiveDayFetched(true)
             setForecastArr(jsonFiveDay.data)
+            console.log('forecastArr: ', forecastArr)
         })
-    }, 1100)
+    }
     }
 
     return (

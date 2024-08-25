@@ -40,16 +40,11 @@ function Header() {
             clicked={clicked}
         />  
 
-    const forecast = 
-        forecastArr.map((item, index) => <FiveDay
-            item={item} 
-            key={index}
-            number={index} 
-            fiveDayFetched={fiveDayFetched}
-            clicked={clicked}
-        />) 
+    //const forecast = 
 
+    //console.log('forecastArr: ', forecastArr)
     return (
+        
         <div id="body">
             <Container id="input">
                 <input type="text"
@@ -65,7 +60,13 @@ function Header() {
                 {currentWeatherInfo}
             </Container>
             <Container id="forecast">
-                {forecast}
+                {forecastArr.map((item) => <FiveDay
+                    item={item} 
+                    key={item.sunrise_ts}
+                    number={item.sunrise_ts}
+                    fiveDayFetched={fiveDayFetched}
+                    clicked={clicked}
+                />)} 
             </Container>
             
         </div>
